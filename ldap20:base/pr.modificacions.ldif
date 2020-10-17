@@ -1,0 +1,17 @@
+dn: cn=profe,ou=usuaris,dc=edt,dc=org
+changetype: modify
+replace: homephone
+homephone: 611342195
+-
+delete: description
+-
+add: description
+description: Hola que tal
+
+dn: cn=profe,ou=usuaris,dc=edt,dc=org
+changetype: modrdn
+newrdn: cn=profesito
+deleteoldrdn: 1
+newsuperior: ou=usuaris,dc=edt,dc=org
+
+

@@ -1,3 +1,0 @@
-hola.txt
-ldap20:base
-README.md

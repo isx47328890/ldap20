@@ -1,0 +1,4 @@
+access what by action
+access to *
+	mail
+	mail,homephone

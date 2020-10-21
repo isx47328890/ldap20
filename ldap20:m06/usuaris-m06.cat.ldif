@@ -1,0 +1,64 @@
+#dn: dc=m06,dc=cat
+#dc: m06
+#description: Modul M06-ASO
+#objectClass: dcObject
+#objectClass: organization
+#o: m06.cat
+
+#dn: ou=professors,dc=m06,dc=cat
+#ou: professors
+#description: Container per professors del modul M06
+#objectclass: organizationalunit
+
+dn: cn=Eduard Canet,ou=professors,dc=m06,dc=cat
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Eduard Canet
+cn: Edu Canet  
+sn: Canet
+homephone: 555-222-2224
+mail: eduard@m06.cat
+description: Professor del modul de M06
+ou: professors
+uid: eduard
+uidNumber: 9000
+gidNumber: 300
+homeDirectory: /tmp/home/eduard
+userPassword: {SSHA}mpstRakpW34AfRSq8Qyn08WACB7swDBv
+
+#dn: ou=alumnes,dc=m06,dc=cat
+#ou: alumnes
+#description: Container per alumnes del modul M06
+#objectclass: organizationalunit
+
+dn: cn=Mark Santiago,ou=alumnes,dc=m06,dc=cat
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Mark Santiago
+cn: Mark Stanley
+sn: Santiago
+homephone: 777-777-7777
+mail: mark@m06.cat
+description: Alumne de M06
+ou: alumnes
+uid: mark
+uidNumber: 9001
+gidNumber: 400
+homeDirectory: /tmp/home/mark
+userPassword: {SSHA}jRLeC+58SpWO2eTYZufV9GxPQu8lC3va
+
+dn: cn=Christian Manalo,ou=alumnes,dc=m06,dc=cat
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Christian Manalo
+sn: Manalo
+homephone: 888-888-8888
+mail: christian@m06.cat
+description: Alumne de M06
+ou: alumnes
+uid: christian
+uidNumber: 9002
+gidNumber: 400
+homeDirectory: /tmp/home/christian
+userPassword: {SSHA}aKePZcwkyC+BZW4CDH585Y8Zc7Fht030
+

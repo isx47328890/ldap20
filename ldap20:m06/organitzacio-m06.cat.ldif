@@ -1,0 +1,16 @@
+dn: dc=m06,dc=cat
+dc: m06
+description: Modul M06-ASO
+objectClass: dcObject
+objectClass: organization
+o: m06.cat
+
+dn: ou=professors,dc=m06,dc=cat
+ou: professors
+description: Container per a professors del modul M06
+objectclass: organizationalunit
+
+dn: ou=alumnes,dc=m06,dc=cat
+ou: alumnes
+description: Container per a alumnes del modul M06
+objectclass: organizationalunit

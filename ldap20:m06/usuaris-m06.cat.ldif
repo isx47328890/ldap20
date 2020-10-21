@@ -47,18 +47,19 @@ gidNumber: 400
 homeDirectory: /tmp/home/mark
 userPassword: {SSHA}jRLeC+58SpWO2eTYZufV9GxPQu8lC3va
 
-dn: cn=Christian Manalo,ou=alumnes,dc=m06,dc=cat
+dn: cn=Diego Sanchez,ou=alumnes,dc=m06,dc=cat
 objectclass: posixAccount
 objectclass: inetOrgPerson
-cn: Christian Manalo
-sn: Manalo
+cn: Diego Sanchez
+sn: Diego
 homephone: 888-888-8888
-mail: christian@m06.cat
+mail: diego@m06.cat
 description: Alumne de M06
 ou: alumnes
-uid: christian
+uid: diego
 uidNumber: 9002
 gidNumber: 400
-homeDirectory: /tmp/home/christian
-userPassword: {SSHA}aKePZcwkyC+BZW4CDH585Y8Zc7Fht030
+homeDirectory: /tmp/home/diego
+userPassword: {SSHA}14kbF+I8xwPenniGGCSOFqW/rRlBmlow
+
 

@@ -1,4 +1,5 @@
 access what by action
-access to *
-	mail
-	mail,homephone
+
+# Exemple-01
+access to * by read *
+

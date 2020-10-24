@@ -19,6 +19,11 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -it 
 docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d isx47328890/ldap20:acl
 ```
 
+**Container interactiu després del detach:**
+```bash
+docker exec -it ldap.edt.org /bin/bash
+```
+
 ---
 
 ### Exemples

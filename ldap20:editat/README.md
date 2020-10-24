@@ -9,12 +9,12 @@ Mark Santiago
 
 ---
 
-**Container interactiu:**
+**Crear container interactiu:**
 ```bash
 docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -it isx47328890/ldap20:editat /bin/bash
 ```
 
-**Container detached:**
+**Crear container detached:**
 ```bash
 docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d isx47328890/ldap20:editat
 ```

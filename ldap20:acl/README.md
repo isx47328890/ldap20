@@ -112,6 +112,11 @@ docker exec -it ldap.edt.org /bin/bash
 
 ### Comandes per fer comprovacions
 
+**Consulta de dades**
+```bash
+ldapsearch -x -LLL dn
+```
+
 **Canviar password de Pau amb usuari Pau:**
 ```bash
 ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s pau

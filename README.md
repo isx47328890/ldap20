@@ -3,7 +3,7 @@
 ### Curs 2020 - 2021
 ### Mark Santiago
 
-Imatges de Docker a [Docker hub de isx47328890]
+Imatges de Docker a [Docker hub de isx47328890]  
 Repositori [GitHub de isx47328890] per veure el contingut
 
 ---

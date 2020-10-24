@@ -112,27 +112,27 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d i
 ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s pau
 ```
 
-**Canviar password d'Anna amb usuari Pau**
+**Canviar password d'Anna amb usuari Pau:**
 ```bash
 ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s anna 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org'
 ```
 
-**Modificar el mail Pau amb usuari Pau**
+**Modificar el mail Pau amb usuari Pau:**
 ```bash
 ldapmodify -x -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod1.ldif 
 ```
 
-**Modificar mail Pau amb usuari Anna**
+**Modificar mail Pau amb usuari Anna:**
 ```bash
 ldapmodify -x -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod1.ldif 
 ```
 
-**Modificar homePhone Pau amb usuari Pau**
+**Modificar homePhone Pau amb usuari Pau:**
 ```bash
 ldapmodify -x -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod2.ldif 
 ```
 
-**Modificar homePhone Pau amb usuari Anna**
+**Modificar homePhone Pau amb usuari Anna:**
 ```bash
 ldapmodify -x -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod2.ldif 
 ```

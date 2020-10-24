@@ -4,7 +4,7 @@
 ### Mark Santiago
 
 Imatges de Docker a [Docker hub de isx47328890]
-
+Repositori [GitHub de isx47328890] per veure el contingut
 
 ---
 * **isx47328890/ldap20:base** - Imatge base d'un servidor ldap que funciona amb detach, carrega 'edt.org', els elements bàsics i els usuaris bàsics.
@@ -20,3 +20,4 @@ Imatges de Docker a [Docker hub de isx47328890]
 
 
 [Docker hub de isx47328890]: https://hub.docker.com/u/isx47328890
+[GitHub de isx47328890]: https://github.com/isx47328890/ldap20

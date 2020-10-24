@@ -5,7 +5,7 @@ Mark Santiago
 
 **Imatge:**
 
-* **isx47328890/ldap20:acl** -  Imatge basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
+* **[isx47328890/ldap20:acl]** -  Imatge basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
 
 ---
 
@@ -137,3 +137,4 @@ ldapmodify -x -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod2.ldif
 ldapmodify -x -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod2.ldif 
 ```
 
+[isx47328890/ldap20:acl]: https://hub.docker.com/layers/isx47328890/ldap20/acl/images/sha256-e91f0ca0ae690ec6532c6881f2fd3a8e8ef90ce7a29889d892649413e5b443d2?context=explore

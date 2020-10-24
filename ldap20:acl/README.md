@@ -23,23 +23,23 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d i
 
 ### Exemples
 
-* **Exemple-1:**
+* **Exemple-1:**  
   access to * by * read  
   > * Tothom pot veure les totes dades de la BD.
 
-* **Exemple-2:**
+* **Exemple-2:**  
   access to * by * write  
   > * (Si tinc write, tinc read)
   > * Qualsevol usuari pot modificar dades de la BD.
   > * Els usuaris anònims no poden realitzar modificacions.
 
 
-* **Exemple-3:**
+* **Exemple-3:**  
   access to * by self write by * read  
   > * Tothom pot veure les dades de la BD.
   > * Un usuari només pot modificar les seves dades.
 
-  * **Exemple-3.1:**
+  * **Exemple-3.1:**  
     access to *  
 &nbsp;&nbsp;&nbsp;&nbsp;by * read  
 &nbsp;&nbsp;&nbsp;&nbsp;by self write  
@@ -47,18 +47,18 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d i
     > * Quan intentem modificar un atribut, a l'hora d'identificar-nos.s'aplica la primera norma que és `by * read` ' i l'altre s'ignora.
 
 
-* **Exemple-4**
+* **Exemple-4**  
   access to attrs=homePhone by * read  
   access to * by * write  
   > * Tothom pot modificar tot, però quan s'intenta accedir l'atribut homePhone només es pot llegir.
   > * Quan es processa l'atribut homePhone fa match la primera regla i ignora les següents.
-  * **Exemple-4.1**
+  * **Exemple-4.1**  
   access to * by * write  
   access to attrs= homePhone by * read  
     > * Mai s'executarà la segona regla perquè la primera que afecta a tots. els atributs, fa match i les següents ordres no s'evaluen.
 
 
-* **Exemple-5**
+* **Exemple-5**  
   access to attrs=homePhone  
   &nbsp;&nbsp;&nbsp;&nbsp;by dn.exact="cn=Anna Pou,ou=usuaris,dc=edt, dc=org" write  
   &nbsp;&nbsp;&nbsp;&nbsp;by * read  
@@ -66,7 +66,7 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d i
   > * Tots els usuaris poden modificar qualsevol dada de la BD, menys l'atribut homePhone que només es pot llegir
   > * Només l'usuari Anna pot modificar-la.
 
-  * **Exemple-5.1**
+  * **Exemple-5.1**  
   access to attrs=homePhone  
     &nbsp;&nbsp;&nbsp;&nbsp;by dn.exact=”cn=Anna Pou,ou=usuaris,dc=edt,dc=org’ write  
     &nbsp;&nbsp;&nbsp;&nbsp;[by * none]  
@@ -76,7 +76,7 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d i
   [access to * by * none]  
     > * Està malament perquè la segona instrucció mai s'executarà, si s'intenta accedir a homePhone sempre farà match amb la primera clàusula *what*
 
-* **Exemple-6**
+* **Exemple-6**  
   access to attrs=homePhone  
   &nbsp;&nbsp;&nbsp;&nbsp;by dn.exact=”cn=Anna Pou,ou=usuaris,dc=edt,dc=org” write  
   &nbsp;&nbsp;&nbsp;&nbsp;by dn.exact=”cn=Admin System,ou=usuaris,dc=edt,dc=org” write  
@@ -89,13 +89,13 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d i
   > * Els altres camps poden ser modificats per l'usuari Admin System
   > * Els usuaris poden modificar els seus propis camps i llegir les dades dels altres usuaris
 
-* **Exemple-7**
+* **Exemple-7**  
   access to attrs=userPassword  
   &nbsp;&nbsp;&nbsp;&nbsp; by self write  
   access to * by * read  
   > * Tot els usuaris poden modificar el seu propi password i tothom pot veure les dades dels altres menys el password. (Falta *by * auth*)
 
-  * **Exemple-7.1**
+  * **Exemple-7.1**  
   access to attrs=userPassword  
   &nbsp;&nbsp;&nbsp;&nbsp;by self write  
   &nbsp;&nbsp;&nbsp;&nbsp;by * auth  

@@ -10,12 +10,12 @@ Mark Santiago
 ---
 
 **Container interactiu:**
-```
+```bash
 docker run --rm --name ldap.m06.cat -h ldap.m06.cat --net 2hisix -p 389:389 -it isx47328890/ldap20:m06 /bin/bash
 ```
 
 **Container detached:**
-```
+```bash
 docker run --rm --name ldap.m06.cat -h ldap.m06.cat --net 2hisix -p 389:389 -d isx47328890/ldap20:m06
 ```
 

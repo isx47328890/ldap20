@@ -30,7 +30,7 @@ docker exec -it ldap.edt.org /bin/bash
 
 * **Exemple-1:**  
   access to * by * read  
-  > * Tothom pot veure les totes dades de la BD.
+  > * Tothom pot veure totes les dades de la BD.
 
 * **Exemple-2:**  
   access to * by * write  
@@ -114,7 +114,7 @@ docker exec -it ldap.edt.org /bin/bash
 
 **Consulta de dades**
 ```bash
-ldapsearch -x -LLL dn
+ldapsearch -x -LLL
 ```
 
 **Canviar password de Pau amb usuari Pau:**
@@ -122,29 +122,29 @@ ldapsearch -x -LLL dn
 ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s pau
 ```
 
-**Canviar password d'Anna amb usuari Pau:**
+**Canviar password de Pau amb usuari Anna:**
 ```bash
-ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s anna 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org'
+ldappasswd -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -s pau 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org'
 ```
 
 **Modificar el mail Pau amb usuari Pau:**
 ```bash
-ldapmodify -x -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod1.ldif 
+ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod1.ldif 
 ```
 
 **Modificar mail Pau amb usuari Anna:**
 ```bash
-ldapmodify -x -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod1.ldif 
+ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod1.ldif 
 ```
 
 **Modificar homePhone Pau amb usuari Pau:**
 ```bash
-ldapmodify -x -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod2.ldif 
+ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod2.ldif 
 ```
 
 **Modificar homePhone Pau amb usuari Anna:**
 ```bash
-ldapmodify -x -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod2.ldif 
+ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod2.ldif 
 ```
 
 [isx47328890/ldap20:acl]: https://hub.docker.com/layers/isx47328890/ldap20/acl/images/sha256-e91f0ca0ae690ec6532c6881f2fd3a8e8ef90ce7a29889d892649413e5b443d2?context=explore

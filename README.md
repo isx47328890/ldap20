@@ -17,7 +17,7 @@ Repositori [GitLab de isx47328890] per veure el contingut
 * **isx47328890/ldap20:m06** - Imatge d'un servidor ldap amb databse mdb, contrasenya de Manager xifrat. Funciona amb detach, carrega 'm06.cat', els elements bàsics i els usuaris bàsics.
 
 
-* **isx47328890/ldap20:acl** -  Imatge basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
+* **isx47328890/ldap20:acl** -  Imatge amb cn=config basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
 
 
 [Docker hub de isx47328890]: https://hub.docker.com/u/isx47328890

@@ -5,7 +5,7 @@ Mark Santiago
 
 **Imatge:**
 
-* **[isx47328890/ldap20:acl]** -  Imatge basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
+* **[isx47328890/ldap20:acl]** -  Imatge amb BD cn=config basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
 
 ---
 
@@ -26,7 +26,7 @@ docker exec -it ldap.edt.org /bin/bash
 
 ---
 
-### Exemples
+### Exemples ACLs
 
 * **Exemple-1:**  
   access to * by * read  
@@ -110,7 +110,7 @@ docker exec -it ldap.edt.org /bin/bash
 
 ---
 
-### Comandes per fer comprovacions
+### Comandes per fer comprovacions ACLs
 
 **Consulta de dades**
 ```bash
@@ -146,5 +146,21 @@ ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod2.ldif
 ```bash
 ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod2.ldif 
 ```
+
+---
+
+### Comandes per llistar configuració dinàmica
+
+**Llistar config de dc=edt,dc=org**
+```bash
+ldapsearch -x -LLL -D 'cn=Sysadmin,cn=config' -w syskey -b 'olcDatabase={1}mdb,cn=config'
+```
+
+**Llistar ACLs de dc=edt,dc=org**
+```bash
+ldapsearch -x -LLL -D 'cn=Sysadmin,cn=config' -w syskey -b 'olcDatabase={1}mdb,cn=config' olcAccess
+```
+
+
 
 [isx47328890/ldap20:acl]: https://hub.docker.com/layers/isx47328890/ldap20/acl/images/sha256-e91f0ca0ae690ec6532c6881f2fd3a8e8ef90ce7a29889d892649413e5b443d2?context=explore

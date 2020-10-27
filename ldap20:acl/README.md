@@ -160,7 +160,23 @@ ldapsearch -x -LLL -D 'cn=Sysadmin,cn=config' -w syskey -b 'olcDatabase={1}mdb,c
 ```bash
 ldapsearch -x -LLL -D 'cn=Sysadmin,cn=config' -w syskey -b 'olcDatabase={1}mdb,cn=config' olcAccess
 ```
+---
 
+### Exemple fitxer ldif per modificació amb configuració dinàmica
+
+```
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+delete: olcAccess
+-
+add: olcAccess
+olcAccess: to attrs=userPassword
+  by self write
+  by * auth
+olcAccess: to * 
+  by * read
+
+```
 
 
 [isx47328890/ldap20:acl]: https://hub.docker.com/layers/isx47328890/ldap20/acl/images/sha256-e91f0ca0ae690ec6532c6881f2fd3a8e8ef90ce7a29889d892649413e5b443d2?context=explore

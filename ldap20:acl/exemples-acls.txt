@@ -1,5 +1,0 @@
-access what by action
-
-# Exemple-01
-access to * by read *
-

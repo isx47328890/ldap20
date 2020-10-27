@@ -124,27 +124,27 @@ ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s pau
 
 **Canviar password de Pau amb usuari Anna:**
 ```bash
-ldappasswd -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -s pau 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org'
+ldappasswd -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -s pau
 ```
 
 **Modificar el mail Pau amb usuari Pau:**
 ```bash
-ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod1.ldif 
+ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f mod2.ldif 
 ```
 
 **Modificar mail Pau amb usuari Anna:**
 ```bash
-ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod1.ldif 
+ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f mod2.ldif 
 ```
 
 **Modificar homePhone Pau amb usuari Pau:**
 ```bash
-ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f pr.mod2.ldif 
+ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f mod3.ldif 
 ```
 
 **Modificar homePhone Pau amb usuari Anna:**
 ```bash
-ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f pr.mod2.ldif 
+ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f mod3.ldif 
 ```
 
 ---

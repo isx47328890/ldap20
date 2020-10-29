@@ -114,7 +114,7 @@ docker exec -it ldap.edt.org /bin/bash
 
 **Consulta de dades**
 ```bash
-ldapsearch -x -LLL
+ldapsearch -x -LLL -b 'dc=edt,dc=org'
 ```
 
 **Canviar password de Pau amb usuari Pau:**

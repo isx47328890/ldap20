@@ -114,7 +114,7 @@ docker exec -it ldap.edt.org /bin/bash
 
 **Consulta de dades**
 ```bash
-ldapsearch -x -LLL -h localhost-b 'dc=edt,dc=org'
+ldapsearch -x -LLL -h localhost -b 'dc=edt,dc=org'
 ```
 
 **Consulta de dades com a usuari Pau Pou**

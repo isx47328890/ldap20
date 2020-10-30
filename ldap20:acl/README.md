@@ -114,37 +114,42 @@ docker exec -it ldap.edt.org /bin/bash
 
 **Consulta de dades**
 ```bash
-ldapsearch -x -LLL -b 'dc=edt,dc=org'
+ldapsearch -x -LLL -h localhost-b 'dc=edt,dc=org'
+```
+
+**Consulta de dades com a usuari Pau Pou**
+```bash
+ldapsearch -x -LLL -h localhost -b 'dc=edt,dc=org' -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau 
 ```
 
 **Canviar password de Pau amb usuari Pau:**
 ```bash
-ldappasswd -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s pau
+ldappasswd -x -v -h localhost -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -s pau
 ```
 
 **Canviar password de Pau amb usuari Anna:**
 ```bash
-ldappasswd -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -s pau
+ldappasswd -x -v -h localhost -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -s pau
 ```
 
 **Modificar el mail Pau amb usuari Pau:**
 ```bash
-ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f mod2.ldif 
+ldapmodify -x -v -h localhost -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f mod2.ldif 
 ```
 
 **Modificar mail Pau amb usuari Anna:**
 ```bash
-ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f mod2.ldif 
+ldapmodify -x -v -h localhost -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f mod2.ldif 
 ```
 
 **Modificar homePhone Pau amb usuari Pau:**
 ```bash
-ldapmodify -x -v -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f mod3.ldif 
+ldapmodify -x -v -h localhost -D 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' -w pau -f mod3.ldif 
 ```
 
 **Modificar homePhone Pau amb usuari Anna:**
 ```bash
-ldapmodify -x -v -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f mod3.ldif 
+ldapmodify -x -v -h localhost -D 'cn=Anna Pou,ou=usuaris,dc=edt,dc=org' -w anna -f mod3.ldif 
 ```
 
 ---

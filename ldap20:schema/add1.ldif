@@ -1,5 +1,5 @@
 dn: cn=Dembele,ou=usuaris,dc=edt,dc=org
-objectClass: x-Futbolista
+objectClass: x-futbolista
 cn: dembele
 sn: lo crack
 x-equip: barca

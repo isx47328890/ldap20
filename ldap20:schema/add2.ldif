@@ -1,5 +1,5 @@
 dn: cn=ramon ferrer,ou=usuaris,dc=edt,dc=org
-objectClass: x-Futbolista
+objectClass: x-futbolista
 cn: ramon ferrer
 sn: ramon
 x-equip: barca
@@ -10,7 +10,7 @@ homePhone: 123456789
 mail: ramon@barca.cat
 
 dn: cn=ferran roig,ou=usuaris,dc=edt,dc=org
-objectClass: x-Futbolista
+objectClass: x-futbolista
 cn: ferran roig
 sn: ferran
 x-equip: barca

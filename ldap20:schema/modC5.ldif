@@ -1,0 +1,15 @@
+dn: cn=Pau Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-futbolista
+-
+add: x-equip
+x-equip: barca
+
+dn: cn=Jordi Mas,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-futbolista
+-
+add: x-equip
+x-equip: barca

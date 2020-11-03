@@ -1,0 +1,21 @@
+dn: cn=ramon ferrer,ou=usuaris,dc=edt,dc=org
+objectClass: inetOrgPerson
+objectClass: x-futbolista
+cn: ramon ferrer
+sn: ramon
+x-lonom: ramonet
+x-equip: barca
+x-dorsal: 12
+x-web: www.ramon.com
+x-lesionat: FALSE
+
+dn: cn=ferran roig,ou=usuaris,dc=edt,dc=org
+objectClass: inetOrgPerson
+objectClass: x-futbolista
+cn: ferran roig
+sn: ferran
+x-lonom: killer area
+x-equip: barca
+x-dorsal: 4
+x-web: www.ferran.com
+x-lesionat: FALSE

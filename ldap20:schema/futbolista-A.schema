@@ -37,17 +37,10 @@ attributetype ( 1.1.2.1.5 NAME 'x-lesionat'
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
   SINGLE-VALUE )
 
-attributetype ( 1.1.2.1.6 NAME 'x-lonom'
-  DESC 'lonom del jugador'
-  EQUALITY caseIgnoreMatch
-  SUBSTR caseIgnoreSubstringsMatch
-  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
-  SINGLE-VALUE )
-
 objectClass (1.1.2.2.1 NAME 'x-futbolista'
   DESC 'futboleros crazys'
-  SUP TOP
-  AUXILIARY
+  SUP inetOrgPerson
+  STRUCTURAL
   MUST x-equip
-  MAY ( x-lonom $ x-dorsal $ x-web $ x-foto $ x-lesionat )
+  MAY (x-dorsal $ x-web $ x-foto $ x-lesionat)
   )

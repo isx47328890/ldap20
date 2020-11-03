@@ -1,0 +1,15 @@
+dn: x-lonom=ramon ferrer,ou=usuaris,dc=edt,dc=org
+objectClass: x-futbolista
+x-lonom: ramon ferrer
+x-equip: barca
+x-dorsal: 12
+x-web: www.ramon.com
+x-lesionat: FALSE
+
+dn: x-lonom=ferran roig,ou=usuaris,dc=edt,dc=org
+objectClass: x-futbolista
+x-lonom: ferran roig
+x-equip: barca
+x-dorsal: 4
+x-web: www.ferran.com
+x-lesionat: FALSE

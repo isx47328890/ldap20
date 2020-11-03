@@ -47,7 +47,7 @@ attributetype ( 1.1.2.1.6 NAME 'x-lonom'
 objectClass (1.1.2.2.1 NAME 'x-futbolista'
   DESC 'futboleros crazys'
   SUP TOP
-  AUXILIARY
-  MUST x-equip
-  MAY ( x-lonom $ x-dorsal $ x-web $ x-foto $ x-lesionat )
+  STRUCTURAL
+  MUST ( x-lonom $ x-equip )
+  MAY (x-dorsal $ x-web $ x-foto $ x-lesionat)
   )

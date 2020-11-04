@@ -49,5 +49,5 @@ objectClass (1.1.2.2.1 NAME 'x-futbolista'
   SUP TOP
   AUXILIARY
   MUST x-equip
-  MAY ( x-lonom $ x-dorsal $ x-web $ x-foto $ x-lesionat )
-  )
+  MAY ( x-dorsal $ x-web $ x-foto $ x-lesionat $ x-lonom )
+  ) 

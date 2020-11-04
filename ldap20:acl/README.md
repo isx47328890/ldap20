@@ -1,7 +1,6 @@
-# LDAP Server
-@edt ASIX M06-ASO
-Servidor LDAP
-Mark Santiago
+# LDAP SERVER
+## @edt ASIX M06-ASO
+### Mark Santiago
 
 **Imatge:**
 

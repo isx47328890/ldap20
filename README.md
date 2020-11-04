@@ -1,4 +1,5 @@
-# LDAP
+![alt text][logo]
+
 ## @edt ASIX M06-ASO
 ### Curs 2020 - 2021
 ### Mark Santiago
@@ -19,7 +20,10 @@ Repositori [GitLab de isx47328890] per veure el contingut
 
 * **isx47328890/ldap20:acl** -  Imatge amb cn=config basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
 
+* **isx47328890/phpldapadmin20** - Imatge que instal·la i configura l'eina phpldapadmin i configura apache amb detach i port 80
 
+
+[logo]: https://www.ecured.cu/images/0/0a/Ldaplogo.jpg
 [Docker hub de isx47328890]: https://hub.docker.com/u/isx47328890
 [GitHub de isx47328890]: https://github.com/isx47328890/ldap20
 [GitLab de isx47328890]: https://gitlab.com/isx47328890/ldap20

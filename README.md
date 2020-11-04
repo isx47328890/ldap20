@@ -23,7 +23,7 @@ Repositori [GitLab de isx47328890] per veure el contingut
 * **isx47328890/phpldapadmin20** - Imatge que instal·la i configura l'eina phpldapadmin i configura apache amb detach i port 80
 
 
-[logo]: https://www.ecured.cu/images/0/0a/Ldaplogo.jpg
+[logo]: https://www.openldap.org/images/headers/LDAPworm.gif
 [Docker hub de isx47328890]: https://hub.docker.com/u/isx47328890
 [GitHub de isx47328890]: https://github.com/isx47328890/ldap20
 [GitLab de isx47328890]: https://gitlab.com/isx47328890/ldap20

@@ -1,0 +1,53 @@
+# Master schema
+#
+# x-graduat
+# x-nomMaster
+# x-notaMaster
+# x-web
+# x-foto
+# x-document
+
+attributetype (1.1.2.1.1 NAME 'x-graduat'
+	DESC 'true/false graduat del master'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+	SINGLE-VALUE
+	)
+
+attributetype (1.1.2.1.2 NAME 'x-nomMaster'
+	DESC 'nom del master'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{25}
+	)
+
+attributetype (1.1.2.1.3 NAME 'x-notaMaster'
+	DESC 'nota master del usuari'
+	EQUALITY integerMatch
+	ORDERING integerOrderingMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{2}
+	SINGLE-VALUE
+	)
+
+attributetype (1.1.2.1.4 NAME 'x-web'
+	DESC 'pagina web de informacio associada al master'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	)
+
+attributetype (1.1.2.1.5 NAME 'x-foto'
+	DESC 'fotografia del usuari matriculat'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.28
+	)
+
+attributetype (1.1.2.1.6 NAME 'x-certificatMaster'
+	DESC 'document del certificat del master' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+	)
+
+objectClass (1.1.2.2.1 NAME 'x-master'
+	DESC 'alumne cursant master o graduat'
+	SUP TOP
+	AUXILIARY
+	MUST ( x-graduat $ x-nomMaster )
+	MAY ( x-notaMaster $ x-web $ x-foto $ x-certificatMaster )
+	)
+

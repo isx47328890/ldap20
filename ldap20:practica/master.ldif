@@ -1,0 +1,86 @@
+dn: uid=pau,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-master
+-
+add: x-graduat
+x-graduat: TRUE
+-
+add: x-nomMaster
+x-nomMaster: Master universitari en Enginyeria Informatica
+-
+add: x-notaMaster
+x-notaMaster: 8
+-
+add: x-web
+x-web: www.upc.edu/ca/masters/enginyeria-informatica
+-
+add: x-foto
+x-foto:< file:///opt/docker/images/pau.jpeg
+-
+add: x-certificatMaster
+x-certificatMaster:< file:///opt/docker/documents/pau.pdf
+
+
+dn: uid=pere,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-master
+-
+add: x-graduat
+x-graduat: FALSE
+-
+add: x-nomMaster
+x-nomMaster: Master universitari en Ciberseguretat
+-
+add: x-web
+x-web: www.upc.edu/ca/masters/cybersecurity
+-
+add: x-foto
+x-foto:< file:///opt/docker/images/pere.jpeg
+
+
+dn: uid=user01,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-master
+-
+add: x-graduat
+x-graduat: TRUE
+-
+add: x-nomMaster
+x-nomMaster: Master's degree in Artificial Intelligence
+-
+add: x-notaMaster
+x-notaMaster: 7
+-
+add: x-web
+x-web: www.upc.edu/ca/masters/artificial-intelligence
+-
+add: x-foto
+x-foto:< file:///opt/docker/images/user01.jpeg
+-
+add: x-certificatMaster
+x-certificatMaster:< file:///opt/docker/documents/user01.pdf
+
+
+dn: uid=user03,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-master
+-
+add: x-graduat
+x-graduat: FALSE
+-
+add: x-nomMaster
+x-nomMaster: Master's degree in Cybersecurity
+-
+add: x-web
+x-web: www.upc.edu/ca/masters/artificial-intelligence
+-
+add: x-foto
+x-foto:< file:///opt/docker/images/user03.jpeg
+
+
+
+

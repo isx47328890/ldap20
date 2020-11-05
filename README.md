@@ -20,9 +20,11 @@ Repositori [GitLab de isx47328890] per veure el contingut
 
 * **isx47328890/ldap20:acl** -  Imatge amb cn=config basat en ldap20:editat que s'utilitzarà per fer proves de les acls.
 
-* **isx47328890/phpldapadmin20** - Imatge que instal·la i configura l'eina phpldapadmin i configura apache amb detach i port 80
+* **isx47328890/phpldapadmin20** - Imatge que instal·la i configura l'eina phpldapadmin i configura apache amb detach i port 80.
 
-* **isx47328890/ldap20:group** - Imatge editat del servidor base amb database mdb, contrasenya de Manager xifrat, un sol fitxer ldif, RDNs modificats, amb una entitat organizationalUnit anomenada grups, grups amb entitat posixAccount i schemas no necessaris eliminats
+* **isx47328890/ldap20:group** - Imatge editat del servidor base amb database mdb, contrasenya de Manager xifrat, un sol fitxer ldif, RDNs modificats, amb una entitat organizationalUnit anomenada grups, grups amb entitat posixAccount i schemas no necessaris eliminats.
+
+* **isx47328890/ldap20:practica** - Imatge editat del servidor base amb database mdb, contrasenya de Manager xifrat, un sol fitxer ldif, RDNs modificats, amb una entitat organizationalUnit anomenada grups, grups amb entitat posixAccount i schemas no necessaris eliminats, incluit schema 'x-master' i els seus atributs als usuaris pau, pere, user01 i user03.
 
 [logo]: https://www.openldap.org/images/headers/LDAPworm.gif
 [Docker hub de isx47328890]: https://hub.docker.com/u/isx47328890

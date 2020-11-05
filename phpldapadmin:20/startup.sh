@@ -1,4 +1,4 @@
 #! /bin/bash
 bash install.sh
-/sbin/php-fpm -D
+/sbin/php-fpm
 /sbin/httpd -DFOREGROUND

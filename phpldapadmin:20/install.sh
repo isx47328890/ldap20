@@ -1,5 +1,5 @@
 #! /bin/bash
 # Install phpldapadmin configuration
 
-cp /opt/phpldapadmin/config.php /etc/phpldapadmin/.
-cp /opt/phpldapadmin/phpldapadmin.conf /etc/httpd/conf.d/. 
+cp /opt/docker/config.php /etc/phpldapadmin/.
+cp /opt/docker/phpldapadmin.conf /etc/httpd/conf.d/. 

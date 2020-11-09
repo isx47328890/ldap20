@@ -30,62 +30,8 @@ ou: grups
 description: Container per a grups
 objectClass: organizationalunit
 
-dn: cn=professors,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: professors
-gidNumber: 601
-description: Grup de professors
-memberUid: pau
-memberUid: pere
 
-dn: cn=alumnes,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: alumnes
-gidNumber: 600
-description: Grup de alumnes
-memberUid: anna
-memberUid: marta
-memberUid: jordi
-
-dn: cn=1asix,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: 1asix
-gidNumber: 610
-description: Grup de 1 asix
-memberUid: user01
-memberUid: user02
-memberUid: user03
-memberUid: user04
-memberUid: user05
-
-dn: cn=2asix,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: 2asix
-gidNumber: 611
-description: Grup de 2 asix
-memberUid: user06
-memberUid: user07
-memberUid: user08
-memberUid: user09
-memberUid: user10
-
-dn: cn=1wiam,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: 1wiam
-gidNumber: 612
-description: Grup de 1wiam
-
-dn: cn=2wiam,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: 2wiam
-gidNumber: 613
-description: Grup de 2wiam
-
-dn: cn=1hiaw,ou=grups,dc=edt,dc=org
-objectClass: posixGroup
-cn: 1hiaw
-gidNumber: 614
-description: Grup de 1hiaw
+# ------- usuaris----------------------
 
 dn: uid=pau,ou=usuaris,dc=edt,dc=org
 objectclass: posixAccount
@@ -162,7 +108,7 @@ ou: Alumnes
 ou: Profes
 uid: jordi
 uidNumber: 5004
-gidNumber: 100
+gidNumber: 601
 homeDirectory: /tmp/home/jordi
 userPassword: {SSHA}T5jrMgpJwZZgu0azkLIVoYhiG08/KGUv
 
@@ -343,3 +289,69 @@ uidNumber: 7010
 gidNumber: 611
 homeDirectory: /tmp/home/2asix/user10
 userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+# -------- grups -----------
+dn: cn=professors,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: professors
+gidNumber: 601
+description: Grup de professors
+memberUid: pau
+memberUid: pere
+memberUid: jordi
+
+dn: cn=alumnes,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: alumnes
+gidNumber: 600
+description: Grup de alumnes
+memberUid: anna
+memberUid: marta
+memberUid: jordi
+
+dn: cn=1asix,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: 1asix
+gidNumber: 610
+description: Grup de 1 asix
+memberUid: user01
+memberUid: user02
+memberUid: user03
+memberUid: user04
+memberUid: user05
+
+dn: cn=2asix,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: 2asix
+gidNumber: 611
+description: Grup de 2 asix
+memberUid: user06
+memberUid: user07
+memberUid: user08
+memberUid: user09
+memberUid: user10
+
+dn: cn=wheel,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: wheel
+gidNumber: 10
+description: Grup de wheel
+memberUid: admin
+
+dn: cn=1wiam,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: 1wiam
+gidNumber: 612
+description: Grup de 1wiam
+
+dn: cn=2wiam,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: 2wiam
+gidNumber: 613
+description: Grup de 2wiam
+
+dn: cn=1hiaw,ou=grups,dc=edt,dc=org
+objectClass: posixGroup
+cn: 1hiaw
+gidNumber: 614
+description: Grup de 1hiaw

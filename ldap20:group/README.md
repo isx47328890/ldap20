@@ -5,7 +5,7 @@ Mark Santiago
 
 **Imatge:**
 
-* **[isx47328890/ldap20:group]** - Imatge editat del servidor base amb database mdb, contrasenya de Manager xifrat, un sol fitxer ldif, RDNs modificats, amb una entitat organizationalUnit anomenada grups, grups amb entitat posixAccount i schemas no necessaris eliminats
+* **[isx47328890/ldap20:group]** - Imatge editat del servidor base amb database mdb, contrasenya de Manager xifrat, un sol fitxer ldif, uid, amb una entitat organizationalUnit anomenada grups, grups amb entitat posixAccount i schemas no necessaris eliminats
 
 ---
 

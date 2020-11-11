@@ -45,7 +45,7 @@ attributetype (1.1.2.1.6 NAME 'x-certificatMaster'
 
 objectClass (1.1.2.2.1 NAME 'x-master'
 	DESC 'alumne cursant master o graduat'
-	SUP TOP
+	SUP top
 	AUXILIARY
 	MUST ( x-graduat $ x-nomMaster )
 	MAY ( x-notaMaster $ x-web $ x-foto $ x-certificatMaster )

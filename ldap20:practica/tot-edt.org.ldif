@@ -156,7 +156,7 @@ uid: user01
 uidNumber: 7001
 gidNumber: 610
 homeDirectory: /tmp/home/1asix/user01
-userPassword:: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
 x-graduat: TRUE
 x-nomMaster: Master's degree in Artificial Intelligence
 x-notaMaster: 7
@@ -197,7 +197,7 @@ uid: user03
 uidNumber: 7003
 gidNumber: 610
 homeDirectory: /tmp/home/1asix/user03
-userPassword:: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
 x-graduat: FALSE
 x-nomMaster: Master's degree in Cybersecurity
 x-web: www.upc.edu/ca/masters/artificial-intelligence

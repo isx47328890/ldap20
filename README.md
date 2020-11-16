@@ -26,6 +26,10 @@ Repositori [GitLab de isx47328890] per veure el contingut
 
 * **isx47328890/ldap20:practica** - Imatge editat del servidor base amb database mdb, contrasenya de Manager xifrat, un sol fitxer ldif, RDNs modificats, amb una entitat organizationalUnit anomenada grups, grups amb entitat posixAccount i schemas no necessaris eliminats, incluit schema 'x-master' i els seus atributs als usuaris pau, pere, user01 i user03.
 
+* **isx47328890/ldap20:entrypoint** - Imatge amb varies opcions d'arrencada segons el valor que passem: start, initdb, initdbedt, fem servir volums per tenir *permanencia* de dades.
+
+
+
 [logo]: https://www.openldap.org/images/headers/LDAPworm.gif
 [Docker hub de isx47328890]: https://hub.docker.com/u/isx47328890
 [GitHub de isx47328890]: https://github.com/isx47328890/ldap20

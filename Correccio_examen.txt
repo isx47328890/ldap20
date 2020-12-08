@@ -1,0 +1,163 @@
+1. ldapsearch -x -LLL -h localhost -b 'dc=edt,dc=org' -s one
+
+2. ldapdelete -x -D -h locahost 'cn=Manager,dc=edt,dc=org' -w secret 'cn=Pere Pou,ou=usuaris,dc=edt,dc=org'
+
+3. ldappasswd -x -D 'cn=Manager,dc=edt,dc=org' -w secret 'cn=Pere Pou,ou=usuaris,dc=edt,dc=org'
+
+4. ldappasswd -x -D 'cn=Pere Pou,ou=usuaris,dc=edt,dc=org' -w pere -s patapum
+
+5. ldapwhoami -x -D 'cn=Pere Pou,ou=usuaris,dc=edt,dc=org' -w pere
+
+6.
+
+database hdb
+suffix "dc=m06,dc=cat"
+rootdn "cn=Administrador,dc=m06,dc=cat"
+rootpw jupiter
+directory /var/lib/ldap-m06
+
+7. slappasswd -h {MD5}
+
+8. slaptest -f /opt/docker/slapd.conf
+
+9. slaptest -f /opt/docker/slapd.conf -F /etc/openldap/slapd.d
+
+10.
+pkill slapd
+slapadd -F /etc/openldap/slapd.d -l usuarisall.ldif
+
+11.
+chown -R ldap:ldap /var/lib/ldap
+/sbin/slapd
+
+12.
+access to attrs=email,homephone
+  by self write
+  by * read
+
+access to *
+  by * read
+
+13.
+access to attrs=userPassword
+  by self write
+  by * auth
+
+access to *
+  by * read
+
+14.
+access to attrs=email,homePhone
+  self write
+  by * read
+
+access to *
+  self read
+  by * search
+
+15.
+access to attrs=userPassword
+  by dn.exact="cn=Jordi Mas,ou=usuaris,dc=edt,dc=org" write
+  by self write
+  by * auth
+
+access to attrs=homePhone
+  by dn.exact="cn=Jordi Mas,ou=usuaris,dc=edt,dc=org" write
+  by self read
+
+access to *
+  by dn.exact="cn=Jordi Mas,ou=usuaris,dc=edt,dc=org" write
+  by * read
+
+16.
+database config
+rootdn "cn=Administrador,cn=config"
+rootpw jupiter
+
+17.
+ldapsearch -x -LLL -h localhost -D 'cn=Administrador,cn=config' -w jupiter -b 'cn=config'
+
+18.
+dn: olcDatabase{1}bdb,cn=config
+changetype: modify
+delete: olcAccess
+-
+add: olcAccess
+olcAccess: to *
+  by self write
+  by * read
+
+19. ldapmodify -x -D 'cn=Administrador,cn=config' -w jupiter -f acl.ldif
+
+20.
+
+objectClass ( 1.1.2.2.1 NAME 'happyOrgPerson'
+  DESC 	'persones de colectius'
+  SUP inetOrgPerson
+  STRUCTURAL
+  MUST idcat
+  MAY ( associacio $ detingut $ expedient)
+)
+
+21.
+
+attributetype (1.1.2.1.1 NAME 'idcat'
+  DESC 'identificador soci'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+)
+
+22.
+
+dn: cn=Alex Garcia,ou=happys,dc=edt,dc=org
+changetype: add
+objectClass: happyOrgPerson
+cn: alex
+sn: aalex
+idcat: 123
+detingut: TRUE
+
+23.
+
+ldapmodify -x -D 'cn=Manager,dc=edt,dc=org' -w secret -f mod1.ldif
+
+24.
+
+objectClass (1.1.2.2.2 NAME 'motxillaRussa'
+  DESC 'motxilla complement'
+  SUP TOP
+  AUXILIARY
+  MUST ( soldats $ saldarDeficit )
+  MAY urlSecreta
+)
+
+25.
+
+dn: cn=Anna Perez,ou=happys,dc=edt,dc=org
+changetype: add
+objectClass: happyOrgPerson
+objectClass: motxillaRussa
+cn: anna
+sn: annita
+idcat: 124
+soldats: 12
+saldarDeficit: FALSE
+
+
+26.
+
+dn: cn=Pere Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: motxillaRussa
+-
+add: soldats
+soldats: 12
+-
+add: saldarDeficit
+saldarDeficit: TRUE
+ 
+
+
